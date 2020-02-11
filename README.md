@@ -50,6 +50,9 @@ def build(setup_kwargs):
     )
 ```
 
+- Please see the example project for one method of merging your namespaces.
+  - The tests directory shows how the functions can be run (nothing special)
+
 ### Setuptools
 
 Todo - but basically just add `ext_modules = nythonize(nimbase, [{"name": "adder", "path": "ponim/adder.nim"}])` to your setup call
