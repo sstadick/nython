@@ -57,6 +57,10 @@ def build(setup_kwargs):
 
 Todo - but basically just add `ext_modules = nythonize(nimbase, [{"name": "adder", "path": "ponim/adder.nim"}])` to your setup call
 
+## Acknowledgements
+
+nimpy: this is an amazing project that 'just works' and makes working with Nim and Python easy. nython is just the last 5% in getting the packaging to work. nimpy is the fir 95% of the work.
+
 ## Development
 
 ### Goals
@@ -86,3 +90,8 @@ And that is it.
 - Remove the dep fo passing in nimbase.h and find it on the system somehow
 - Possibly create a nim install in your local virtualenv somehow, with nimpy
 - Generate some performance tests, although that is more on nimpy than this package
+
+
+### Ponim
+
+If you are interested in this, and want to see a nice loca dev way of doing things, check out this example I put together: https://github.com/sstadick/ponim
