@@ -4,10 +4,13 @@ version = "0.1.0"
 description = "Seamless Nim extension modules for Python"
 authors = ["Seth Stadick <sstadick@gmail.com>"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/sstadick/nython"
+repository = "https://github.com/sstadick/nython"
+keywords = ["nim", "extension"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"

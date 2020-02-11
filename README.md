@@ -2,6 +2,10 @@
 
 Build Python Extension Modules for Nim libraries.
 
+## Synopsis
+
+This is using Nim's compileToC command to generate C code that Python can then pakcage as an extension module and compile natively when your package is installed elsewhere.
+
 ## System Reqs
 
 - [Nim](https://nim-lang.org/)
