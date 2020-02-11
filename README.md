@@ -4,7 +4,7 @@ Build Python Extension Modules for Nim libraries.
 
 ## Synopsis
 
-This is using Nim's compileToC command to generate C code that Python can then pakcage as an extension module and compile natively when your package is installed elsewhere.
+This is using Nim's compileToC command to generate C code that Python can then package as an extension module and compile natively when your package is installed elsewhere.
 
 ## System Reqs
 
@@ -25,12 +25,12 @@ See the example folder of a working project that uses nython (and runs all the t
 
 ### Poetry
 
-- Add `nython` as package dependancy
+- Add `nython` as package dependency
 - In the `[tool.poetry]` section of the `pyproject.toml`, add `build = "build.py"
 - Create the file `build.py` in top level of your project. This will be called by poetry when creating the package, essentially it just needs to have a `build` function that takes a dict of setup kwargs and adds to it.
 - Add your Nim modules, nythonize them, and pass them back
 - Note: you must pass in nimbase.h
-- Note: your nim code must live in a directory that is included in your package build process. It can live side by side with your python.
+- Note: your Nim code must live in a directory that is included in your package build process. It can live side by side with your python.
 
 ```python
 # Example build.py script
@@ -59,7 +59,8 @@ Todo - but basically just add `ext_modules = nythonize(nimbase, [{"name": "adder
 
 ## Acknowledgements
 
-nimpy: this is an amazing project that 'just works' and makes working with Nim and Python easy. nython is just the last 5% in getting the packaging to work. nimpy is the fir 95% of the work.
+- [nimpy](https://github.com/yglukhov/nimpy): this is an amazing project that 'just works' and makes working with Nim and Python easy. nython is just the last 5% in getting the packaging to work. nimpy is the fir 95% of the work.
+- [faster-than-requests](https://github.com/juancarlospaco/faster-than-requests), I looked a lot at how the build system for this package was set up. Essentially, nython is just a streamlined version of the setup used in faster-than-requests.
 
 ## Development
 
@@ -84,14 +85,14 @@ And that is it.
 
 ### TODOs
 
-- Support Nimble / full nim projects with dependancies
+- Support Nimble / full Nim projects with dependancies
 - Allow for fine-grained compiler option tuning
 - Remove the spurious .so file that ends up in your project root dir.
 - Remove the dep fo passing in nimbase.h and find it on the system somehow
-- Possibly create a nim install in your local virtualenv somehow, with nimpy
+- Possibly create a Nim install in your local virtualenv somehow, with nimpy
 - Generate some performance tests, although that is more on nimpy than this package
 
 
 ### Ponim
 
-If you are interested in this, and want to see a nice loca dev way of doing things, check out this example I put together: https://github.com/sstadick/ponim
+If you are interested in this, and want to see a nice local dev way of doing things, check out this example I put together: https://github.com/sstadick/ponim
