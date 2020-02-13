@@ -62,6 +62,13 @@ def build(setup_kwargs):
 
 Todo - but basically just add `ext_modules = nythonize(nimbase, [{"name": "adder", "path": "ponim/adder.nim"}])` to your setup call
 
+
+## Showcase
+
+A list of projects using nython to reference as how-tos
+
+- [ny_lapper](https://github.com/sstadick/ny_lapper)
+
 ## Acknowledgements
 
 - [nimpy](https://github.com/yglukhov/nimpy): this is an amazing project that 'just works' and makes working with Nim and Python easy. nython is just the last 5% in getting the packaging to work. nimpy is the fir 95% of the work.
