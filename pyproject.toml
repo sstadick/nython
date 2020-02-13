@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nython"
-version = "0.1.0"
+version = "0.1.1"
 description = "Seamless Nim extension modules for Python"
 authors = ["Seth Stadick <sstadick@gmail.com>"]
 license = "MIT"

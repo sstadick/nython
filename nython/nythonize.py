@@ -16,6 +16,7 @@ from shutil import copyfile, rmtree
 from typing import Sequence, Dict, List
 import subprocess
 import sys
+import pathlib
 
 
 # class NimLib(TypedDict):
@@ -37,7 +38,7 @@ def nythonize(nimbase: str, modules: Sequence[Dict[str, str]]) -> List[Extension
     extensions = []
     # Create a top level working dir
     rmtree(join("build", "nim_build"), ignore_errors=True)
-    mkdir(join("build", "nim_build"))
+    pathlib.Path(join("build", "nim_build")).mkdir(parents=True)
     for module in modules:
         module_dir = join("build", "nim_build", f"{module['name']}_build")
         rmtree(module_dir, ignore_errors=True)
