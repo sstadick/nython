@@ -4,7 +4,12 @@ Build Python Extension Modules for Nim libraries.
 
 ## Synopsis
 
-This is using Nim's compileToC command to generate C code that Python can then package as an extension module and compile natively when your package is installed elsewhere.
+This is using Nim's compileToC command to generate C code that Python can
+then package as an extension module and compile natively when your package
+is installed elsewhere. Note that this does not solve the fact that 
+Python wheels with C code are specific the platform they are built on.
+So a wheel built on a mac will run on another mac. Check out the
+manylinux project for ideas on how to build wheels for more platforms.
 
 ## System Reqs
 
